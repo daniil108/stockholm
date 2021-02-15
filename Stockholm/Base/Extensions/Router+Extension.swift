@@ -10,7 +10,7 @@ import UIKit
 extension Router {
     
     func showOKAlertView(_ title: String?, message: String?) {
-        showCustomAlertView(title, message: message, actionText: "action.ok".localized())
+        showCustomAlertView(title, message: message, actionText: R.string.localizable.actionOk())
     }
     
     func showCustomAlertView(_ title: String?, message: String?, style: UIAlertController.Style = .alert, actionText: String, handler: ValueClosure<UIAlertAction>? = nil) {

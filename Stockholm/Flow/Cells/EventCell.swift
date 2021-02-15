@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class EventCellConfiguration: CellConfiguration, ClickableCellConfiguration {
    
@@ -17,17 +18,20 @@ class EventCellConfiguration: CellConfiguration, ClickableCellConfiguration {
     let title: String
     let description: String
     let imageUrl: URL?
-    let date: String
+    let startDate: Date
+    let endDate: Date
 
     init(title: String,
          description: String,
          imageUrl: URL?,
-         date: String,
+         startDate: Date,
+         endDate: Date,
          onClicked: (() -> Void)?) {
         self.title = title
         self.description = description
         self.imageUrl = imageUrl
-        self.date = date
+        self.startDate = startDate
+        self.endDate = endDate
         self.onClicked = onClicked
     }
     
@@ -52,6 +56,8 @@ class EventCell: UITableViewCell, ConfigurableCell {
         guard let configuration = configuration as? EventCellConfiguration else { return }
         topLabel.text = configuration.title
         bottomLabel.text = configuration.description
+        dateLabel.text = configuration.startDate.description
+        avatarImageView.kf.setImage(with: configuration.imageUrl)
     }
     
     

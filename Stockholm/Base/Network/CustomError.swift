@@ -33,7 +33,7 @@ final class CustomError: LocalizedError, Decodable {
 extension CustomError {
     
     static var parsingError: Error {
-        return CustomError(description: "error.parsing".localized())
+        return CustomError(description: R.string.localizable.errorParsing())
     }
     
 }

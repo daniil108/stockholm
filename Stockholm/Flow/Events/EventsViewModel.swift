@@ -63,10 +63,15 @@ private extension EventsViewModel {
         var cells: [CellConfiguration] = []
         for event in events.events {
             let vanueName = events.venues.first(where: { $0.venueId == event.venueId })?.venueName ?? ""
+            var imageUrl: URL?
+            if let imagePath = event.images.first {
+                imageUrl = URL(string: "\(Urls.imagesCloud)\(imagePath)")
+            }
             cells.append(EventCellConfiguration(title: event.name,
                                                 description: vanueName,
-                                                imageUrl: nil,
-                                                date: "Same date") { [weak self] in
+                                                imageUrl: imageUrl,
+                                                startDate: event.startTime,
+                                                endDate: event.endTime) { [weak self] in
                                                     
                                                 })
         }

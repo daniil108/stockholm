@@ -11,7 +11,7 @@ class APIClient {
     
     class func getRequest<T: Decodable>(route: Route, _ completion: @escaping ValueClosure<Result<T>>) {
         guard let request: URLRequest = route.request else {
-            completion(.failure(CustomError(description: "error.url_empty".localized())))
+            completion(.failure(CustomError(description: R.string.localizable.errorUrl_empty())))
             return
         }
         let task = smartDataTask(with: request, completionHandler: { data, response, error in
@@ -20,7 +20,7 @@ class APIClient {
                 return
             }
             guard let data = data else {
-                completion(.failure(CustomError(description: "error.data_null".localized())))
+                completion(.failure(CustomError(description: R.string.localizable.errorData_null())))
                 return
             }
             let decoder = JSONDecoder()
@@ -47,7 +47,7 @@ class APIClient {
                     completion(.failure(err))
                 }
             } else {
-                completion(.failure(CustomError(description: "error.error_message_empty".localized())))
+                completion(.failure(CustomError(description: R.string.localizable.errorError_message_empty())))
             }
         })
         task.resume()
