@@ -18,6 +18,10 @@
 		70DBC6C925DA59DF002B315D /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6C825DA59DF002B315D /* EventsViewModel.swift */; };
 		70DBC6CE25DA59F4002B315D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6CD25DA59F4002B315D /* ApplicationCoordinator.swift */; };
 		70DBC6D225DA5AE2002B315D /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6D125DA5AE2002B315D /* Closure.swift */; };
+		70DBC6D925DA5D45002B315D /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6D825DA5D45002B315D /* UIWindow+Extension.swift */; };
+		70DBC6DD25DA5D87002B315D /* Router+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6DC25DA5D87002B315D /* Router+Extension.swift */; };
+		70DBC6E025DA5DE7002B315D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6DF25DA5DE7002B315D /* String+Extension.swift */; };
+		70DBC6EB25DA5E3E002B315D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC6EA25DA5E3E002B315D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		70DBC6C825DA59DF002B315D /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		70DBC6CD25DA59F4002B315D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		70DBC6D125DA5AE2002B315D /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		70DBC6D825DA5D45002B315D /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		70DBC6DC25DA5D87002B315D /* Router+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Extension.swift"; sourceTree = "<group>"; };
+		70DBC6DF25DA5DE7002B315D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		70DBC6EA25DA5E3E002B315D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 		70DBC6AD25DA589D002B315D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				70DBC6D725DA5D35002B315D /* Extensions */,
 				70DBC6B325DA58BB002B315D /* Coordinator */,
 				70DBC6D125DA5AE2002B315D /* Closure.swift */,
 			);
@@ -126,8 +135,19 @@
 			children = (
 				70DBC69C25DA574D002B315D /* LaunchScreen.storyboard */,
 				70DBC69A25DA574D002B315D /* Assets.xcassets */,
+				70DBC6EA25DA5E3E002B315D /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		70DBC6D725DA5D35002B315D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70DBC6D825DA5D45002B315D /* UIWindow+Extension.swift */,
+				70DBC6DC25DA5D87002B315D /* Router+Extension.swift */,
+				70DBC6DF25DA5DE7002B315D /* String+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DBC69E25DA574D002B315D /* LaunchScreen.storyboard in Resources */,
+				70DBC6EB25DA5E3E002B315D /* Localizable.strings in Resources */,
 				70DBC6C325DA59B5002B315D /* EventsViewController.xib in Resources */,
 				70DBC69B25DA574D002B315D /* Assets.xcassets in Resources */,
 			);
@@ -201,8 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DBC6C625DA59D2002B315D /* EventsModuleIntitializer.swift in Sources */,
+				70DBC6E025DA5DE7002B315D /* String+Extension.swift in Sources */,
 				70DBC6B925DA58D2002B315D /* Router.swift in Sources */,
+				70DBC6D925DA5D45002B315D /* UIWindow+Extension.swift in Sources */,
 				70DBC69225DA574C002B315D /* AppDelegate.swift in Sources */,
+				70DBC6DD25DA5D87002B315D /* Router+Extension.swift in Sources */,
 				70DBC6C925DA59DF002B315D /* EventsViewModel.swift in Sources */,
 				70DBC6D225DA5AE2002B315D /* Closure.swift in Sources */,
 				70DBC6B525DA58CA002B315D /* Coordinator.swift in Sources */,
