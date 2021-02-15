@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		70D2D4F825DAA14900DDC089 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D4F725DAA14900DDC089 /* R.generated.swift */; };
+		70D2D4FD25DAA9F900DDC089 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D4FC25DAA9F900DDC089 /* Date+Extension.swift */; };
 		70DBC69225DA574C002B315D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC69125DA574C002B315D /* AppDelegate.swift */; };
 		70DBC69B25DA574D002B315D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC69A25DA574D002B315D /* Assets.xcassets */; };
 		70DBC69E25DA574D002B315D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC69C25DA574D002B315D /* LaunchScreen.storyboard */; };
@@ -49,6 +50,7 @@
 		018C1A311E92248BB3601E6A /* Pods-Stockholm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockholm.debug.xcconfig"; path = "Target Support Files/Pods-Stockholm/Pods-Stockholm.debug.xcconfig"; sourceTree = "<group>"; };
 		0D5D6DF21BDB6A91ACCB51A8 /* Pods-Stockholm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockholm.release.xcconfig"; path = "Target Support Files/Pods-Stockholm/Pods-Stockholm.release.xcconfig"; sourceTree = "<group>"; };
 		70D2D4F725DAA14900DDC089 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		70D2D4FC25DAA9F900DDC089 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		70DBC68E25DA574C002B315D /* Stockholm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockholm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DBC69125DA574C002B315D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70DBC69A25DA574D002B315D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				70DBC6DC25DA5D87002B315D /* Router+Extension.swift */,
 				70DBC70025DA6320002B315D /* DateDecodingStrategy+Extension.swift */,
 				70DBC72E25DA7D17002B315D /* UITableView+Extension.swift */,
+				70D2D4FC25DAA9F900DDC089 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				70DBC6DD25DA5D87002B315D /* Router+Extension.swift in Sources */,
 				70DBC71425DA7708002B315D /* BaseTableViewAdapter.swift in Sources */,
 				70DBC6F025DA622F002B315D /* Result.swift in Sources */,
+				70D2D4FD25DAA9F900DDC089 /* Date+Extension.swift in Sources */,
 				70DBC70425DA6399002B315D /* Urls.swift in Sources */,
 				70DBC6F725DA6297002B315D /* APIClient.swift in Sources */,
 				70DBC6C925DA59DF002B315D /* EventsViewModel.swift in Sources */,
