@@ -12,3 +12,5 @@
 "error.data_null" = "Data is null";
 "error.error_message_empty" = "Error response without error message";
 "error.parsing" = "Parsing Error";
+
+"events.title" = "Stockholm";

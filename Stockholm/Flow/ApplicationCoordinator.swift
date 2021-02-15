@@ -34,7 +34,8 @@ private extension ApplicationCoordinator {
     
     func showEvents() {
         let vc = EventsModuleInitializer.initialize(output: self)
-        window.setRootViewController(vc)
+        let nc = NavigationController(rootViewController: vc)
+        window.setRootViewController(nc)
     }
     
 }

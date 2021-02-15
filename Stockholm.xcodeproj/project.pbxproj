@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		70D2D4F825DAA14900DDC089 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D4F725DAA14900DDC089 /* R.generated.swift */; };
 		70D2D4FD25DAA9F900DDC089 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D4FC25DAA9F900DDC089 /* Date+Extension.swift */; };
+		70D2D50125DAAFDF00DDC089 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D50025DAAFDF00DDC089 /* NavigationController.swift */; };
 		70DBC69225DA574C002B315D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC69125DA574C002B315D /* AppDelegate.swift */; };
 		70DBC69B25DA574D002B315D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC69A25DA574D002B315D /* Assets.xcassets */; };
 		70DBC69E25DA574D002B315D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC69C25DA574D002B315D /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 		0D5D6DF21BDB6A91ACCB51A8 /* Pods-Stockholm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockholm.release.xcconfig"; path = "Target Support Files/Pods-Stockholm/Pods-Stockholm.release.xcconfig"; sourceTree = "<group>"; };
 		70D2D4F725DAA14900DDC089 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		70D2D4FC25DAA9F900DDC089 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		70D2D50025DAAFDF00DDC089 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		70DBC68E25DA574C002B315D /* Stockholm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockholm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DBC69125DA574C002B315D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70DBC69A25DA574D002B315D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70D2D4FF25DAAFCD00DDC089 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				70DBC72625DA7A8F002B315D /* Cells */,
+				70D2D50025DAAFDF00DDC089 /* NavigationController.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		70DBC68525DA574C002B315D = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +175,7 @@
 		70DBC6BB25DA590B002B315D /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				70DBC72625DA7A8F002B315D /* Cells */,
+				70D2D4FF25DAAFCD00DDC089 /* UIComponents */,
 				70DBC6CD25DA59F4002B315D /* ApplicationCoordinator.swift */,
 				70DBC6BC25DA5969002B315D /* Events */,
 			);
@@ -415,6 +426,7 @@
 				70DBC69225DA574C002B315D /* AppDelegate.swift in Sources */,
 				70DBC6FE25DA62DF002B315D /* Route.swift in Sources */,
 				70DBC71E25DA7763002B315D /* ReusableView.swift in Sources */,
+				70D2D50125DAAFDF00DDC089 /* NavigationController.swift in Sources */,
 				70DBC6FB25DA62BE002B315D /* CustomError.swift in Sources */,
 				70DBC6DD25DA5D87002B315D /* Router+Extension.swift in Sources */,
 				70DBC71425DA7708002B315D /* BaseTableViewAdapter.swift in Sources */,

@@ -48,6 +48,7 @@ class EventsViewController: UIViewController {
 private extension EventsViewController {
     
     func setupUI() {
+        title = R.string.localizable.eventsTitle()
         view.backgroundColor = .white
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
