@@ -13,6 +13,8 @@ class EventsViewController: UIViewController {
     // MARK: - IBOutlets
 
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var loadingView: UIView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Private Properties
     
@@ -50,10 +52,30 @@ private extension EventsViewController {
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.register(EventCell.self)
+        loadingView.isHidden = true
+        
+        adapter.didRefresh = { [weak self] in
+            self?.viewModel.refresh()
+        }
     
         viewModel.sections = { [weak self] sections in
             DispatchQueue.main.async {
                 self?.adapter.reloadWith(descriptors: sections)
+            }
+        }
+        
+        viewModel.activityIndicator = { [weak self] show in
+            guard let `self` = self else { return }
+            DispatchQueue.main.async {
+                if show && !self.adapter.isRefreshing {
+                    self.activityIndicator.startAnimating()
+                    self.loadingView.isHidden = false
+                }
+                if !show {
+                    self.activityIndicator.stopAnimating()
+                    self.loadingView.isHidden = true
+                    self.adapter.stopRefreshing()
+                }
             }
         }
     }

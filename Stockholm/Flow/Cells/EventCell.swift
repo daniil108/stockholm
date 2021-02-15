@@ -62,7 +62,6 @@ class EventCell: UITableViewCell, ConfigurableCell {
         
         bottomLabel.textColor = .black
         bottomLabel.font = .systemFont(ofSize: 11, weight: .regular)
-        bottomLabel.numberOfLines = 3
         
         avatarImageView.contentMode = .scaleAspectFill
         

@@ -11,6 +11,13 @@ open class BaseTableViewAdapter: NSObject {
 
     open weak var tableView: UITableView!
     public private(set) var descriptors = [SectionConfiguration]()
+    private var refreshControl = UIRefreshControl()
+    
+    var didRefresh: (() -> Void)?
+    
+    var isRefreshing: Bool {
+        refreshControl.isRefreshing
+    }
 
     init(_ tableView: UITableView) {
         self.tableView = tableView
@@ -18,11 +25,18 @@ open class BaseTableViewAdapter: NSObject {
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
 
     func reloadWith(descriptors: [SectionConfiguration]) {
         self.descriptors = descriptors
         tableView.reloadData()
+    }
+    
+    func stopRefreshing() {
+        refreshControl.endRefreshing()
     }
     
 }
@@ -87,4 +101,12 @@ extension BaseTableViewAdapter: UITableViewDelegate {
         return descriptors[indexPath.section].rows[indexPath.row].height
     }
 
+}
+
+private extension BaseTableViewAdapter {
+    
+    @objc func refresh(_ sender: AnyObject) {
+       didRefresh?()
+    }
+    
 }
