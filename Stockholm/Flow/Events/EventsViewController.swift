@@ -49,6 +49,7 @@ private extension EventsViewController {
         view.backgroundColor = .white
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
+        tableView.register(EventCell.self)
     
         viewModel.sections = { [weak self] sections in
             DispatchQueue.main.async {

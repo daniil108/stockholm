@@ -13,6 +13,7 @@ class EventsViewModel: EventsViewOutput {
     
     private let output: EventsModuleOutput
     private let eventsInteractor: EventsInteractor
+    private var events: Events?
     
     // MARK: - Initialization
     
@@ -47,8 +48,8 @@ private extension EventsViewModel {
             self?.activityIndicator?(false)
             switch result {
             case .success(let events):
-                print(events)
-                break
+                self?.events = events
+                self?.updateSections()
             case .failure(let error):
                 DispatchQueue.main.async {
                     self?.output.showError(error)
@@ -58,7 +59,18 @@ private extension EventsViewModel {
     }
     
     func updateSections() {
-        
+        guard let events = events else { return }
+        var cells: [CellConfiguration] = []
+        for event in events.events {
+            let vanueName = events.venues.first(where: { $0.venueId == event.venueId })?.venueName ?? ""
+            cells.append(EventCellConfiguration(title: event.name,
+                                                description: vanueName,
+                                                imageUrl: nil,
+                                                date: "Same date") { [weak self] in
+                                                    
+                                                })
+        }
+        sections?([BaseSectionConfiguration(rows: cells)])
     }
     
 }

@@ -10,5 +10,6 @@ import Foundation
 struct Events: Codable {
     
     let events: [Event]
+    let venues: [Venue]
     
 }
