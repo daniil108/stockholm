@@ -6,3 +6,5 @@
 - open the `Stockholm.xcworkspace` project;
 - change bundle id for your certificate;
 - run the app.
+
+![Events screen](https://github.com/daniil108/stockholm/blob/main/scr1.png)
