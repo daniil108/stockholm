@@ -10,6 +10,10 @@
 		70D2D4F825DAA14900DDC089 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D4F725DAA14900DDC089 /* R.generated.swift */; };
 		70D2D4FD25DAA9F900DDC089 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D4FC25DAA9F900DDC089 /* Date+Extension.swift */; };
 		70D2D50125DAAFDF00DDC089 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D50025DAAFDF00DDC089 /* NavigationController.swift */; };
+		70D2D50625DAB2B500DDC089 /* EventViewModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D50525DAB2B500DDC089 /* EventViewModuleInitializer.swift */; };
+		70D2D50A25DAB2BF00DDC089 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D50925DAB2BF00DDC089 /* EventViewModel.swift */; };
+		70D2D50D25DAB2C900DDC089 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2D50C25DAB2C900DDC089 /* EventViewController.swift */; };
+		70D2D51025DAB2D300DDC089 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70D2D50F25DAB2D300DDC089 /* EventViewController.xib */; };
 		70DBC69225DA574C002B315D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC69125DA574C002B315D /* AppDelegate.swift */; };
 		70DBC69B25DA574D002B315D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC69A25DA574D002B315D /* Assets.xcassets */; };
 		70DBC69E25DA574D002B315D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC69C25DA574D002B315D /* LaunchScreen.storyboard */; };
@@ -53,6 +57,10 @@
 		70D2D4F725DAA14900DDC089 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		70D2D4FC25DAA9F900DDC089 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		70D2D50025DAAFDF00DDC089 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		70D2D50525DAB2B500DDC089 /* EventViewModuleInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModuleInitializer.swift; sourceTree = "<group>"; };
+		70D2D50925DAB2BF00DDC089 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		70D2D50C25DAB2C900DDC089 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		70D2D50F25DAB2D300DDC089 /* EventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
 		70DBC68E25DA574C002B315D /* Stockholm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockholm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DBC69125DA574C002B315D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70DBC69A25DA574D002B315D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +119,17 @@
 				70D2D50025DAAFDF00DDC089 /* NavigationController.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		70D2D50425DAB28500DDC089 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				70D2D50525DAB2B500DDC089 /* EventViewModuleInitializer.swift */,
+				70D2D50925DAB2BF00DDC089 /* EventViewModel.swift */,
+				70D2D50C25DAB2C900DDC089 /* EventViewController.swift */,
+				70D2D50F25DAB2D300DDC089 /* EventViewController.xib */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		70DBC68525DA574C002B315D = {
@@ -177,6 +196,7 @@
 			children = (
 				70D2D4FF25DAAFCD00DDC089 /* UIComponents */,
 				70DBC6CD25DA59F4002B315D /* ApplicationCoordinator.swift */,
+				70D2D50425DAB28500DDC089 /* Event */,
 				70DBC6BC25DA5969002B315D /* Events */,
 			);
 			path = Flow;
@@ -341,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DBC69E25DA574D002B315D /* LaunchScreen.storyboard in Resources */,
+				70D2D51025DAB2D300DDC089 /* EventViewController.xib in Resources */,
 				70DBC6EB25DA5E3E002B315D /* Localizable.strings in Resources */,
 				70DBC6C325DA59B5002B315D /* EventsViewController.xib in Resources */,
 				70DBC72C25DA7AA8002B315D /* EventCell.xib in Resources */,
@@ -420,6 +441,7 @@
 				70DBC70725DA708D002B315D /* Events.swift in Sources */,
 				70DBC6C625DA59D2002B315D /* EventsModuleIntitializer.swift in Sources */,
 				70D2D4F825DAA14900DDC089 /* R.generated.swift in Sources */,
+				70D2D50A25DAB2BF00DDC089 /* EventViewModel.swift in Sources */,
 				70DBC72425DA7797002B315D /* ClickableCellConfiguration.swift in Sources */,
 				70DBC6B925DA58D2002B315D /* Router.swift in Sources */,
 				70DBC6D925DA5D45002B315D /* UIWindow+Extension.swift in Sources */,
@@ -433,6 +455,7 @@
 				70DBC6F025DA622F002B315D /* Result.swift in Sources */,
 				70D2D4FD25DAA9F900DDC089 /* Date+Extension.swift in Sources */,
 				70DBC70425DA6399002B315D /* Urls.swift in Sources */,
+				70D2D50625DAB2B500DDC089 /* EventViewModuleInitializer.swift in Sources */,
 				70DBC6F725DA6297002B315D /* APIClient.swift in Sources */,
 				70DBC6C925DA59DF002B315D /* EventsViewModel.swift in Sources */,
 				70DBC72125DA777B002B315D /* ResourceRouter.swift in Sources */,
@@ -445,6 +468,7 @@
 				70DBC6BE25DA597E002B315D /* EventsViewController.swift in Sources */,
 				70DBC72825DA7A9C002B315D /* EventCell.swift in Sources */,
 				70DBC70A25DA70C2002B315D /* EventsInteractor.swift in Sources */,
+				70D2D50D25DAB2C900DDC089 /* EventViewController.swift in Sources */,
 				70DBC6CE25DA59F4002B315D /* ApplicationCoordinator.swift in Sources */,
 				70DBC70D25DA7466002B315D /* Event.swift in Sources */,
 				70DBC71B25DA7745002B315D /* CellConfiguration.swift in Sources */,

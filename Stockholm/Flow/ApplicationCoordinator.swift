@@ -40,12 +40,17 @@ private extension ApplicationCoordinator {
     
 }
 
-// MARK: - ArticlesModuleOutput, ArticleModuleOutput
+// MARK: - EventsModuleOutput, EventModuleOutput
 
-extension ApplicationCoordinator: EventsModuleOutput {
+extension ApplicationCoordinator: EventsModuleOutput, EventModuleOutput {
     
     func showError(_ error: Error) {
         router.showOKAlertView(nil, message: error.localizedDescription)
+    }
+    
+    func onEvent(_ event: Event) {
+        let vc = EventModuleInitializer.initialize(output: self, event: event)
+        router.push(vc)
     }
 
 }

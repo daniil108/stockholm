@@ -10,6 +10,7 @@ import Foundation
 protocol EventsModuleOutput: class {
     
     func showError(_ error: Error)
+    func onEvent(_ event: Event)
     
 }
 

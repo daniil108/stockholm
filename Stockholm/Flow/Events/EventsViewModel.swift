@@ -22,7 +22,7 @@ class EventsViewModel: EventsViewOutput {
         self.eventsInteractor = eventsInteractor
     }
     
-    // MARK: - ArticlesViewOutput
+    // MARK: - EventsViewOutput
     
     var sections: ValueClosure<[SectionConfiguration]>?
     var scrollUp: EmptyClosure?
@@ -72,8 +72,8 @@ private extension EventsViewModel {
                                                 imageUrl: imageUrl,
                                                 startDate: event.startTime,
                                                 endDate: event.endTime) { [weak self] in
-                                                    
-                                                })
+                self?.output.onEvent(event)
+            })
         }
         sections?([BaseSectionConfiguration(rows: cells)])
     }

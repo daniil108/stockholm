@@ -17,6 +17,7 @@ class NavigationController: UINavigationController {
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .black),
                           NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationBar.titleTextAttributes = attributes
+        navigationBar.tintColor = .black
     }
     
     var statusBarStyle: UIStatusBarStyle = .default {
