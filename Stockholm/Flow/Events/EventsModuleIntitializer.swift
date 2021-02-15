@@ -28,7 +28,8 @@ final class EventsModuleInitializer {
     
     static func initialize(output: EventsModuleOutput) -> EventsViewController {
         let viewModel = EventsViewModel(
-            output: output
+            output: output,
+            eventsInteractor: EventsInteractor(with: DispatchQueue.global(qos: .userInteractive))
         )
         return EventsViewController(with: viewModel)
     }

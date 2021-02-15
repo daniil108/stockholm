@@ -9,12 +9,12 @@ import Foundation
 
 enum Route {
     
-    case events(size: Int, page: Int)
+    case events
     
     var url: URL? {
         switch self {
-        case .events(let size, let page):
-            return URL(string: "\(Urls.mainEndpoint)/v4/events?pageSize=\(size)&pageNumber=\(page)")
+        case .events:
+            return URL(string: "\(Urls.mainEndpoint)/v4/events")
         }
     }
     

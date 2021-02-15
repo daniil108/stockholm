@@ -12,11 +12,13 @@ class EventsViewModel: EventsViewOutput {
     // MARK: - Private Properties
     
     private let output: EventsModuleOutput
+    private let eventsInteractor: EventsInteractor
     
     // MARK: - Initialization
     
-    init(output: EventsModuleOutput) {
+    init(output: EventsModuleOutput, eventsInteractor: EventsInteractor) {
         self.output = output
+        self.eventsInteractor = eventsInteractor
     }
     
     // MARK: - ArticlesViewOutput
@@ -27,6 +29,7 @@ class EventsViewModel: EventsViewOutput {
     
     func viewDidLoad() {
 //        getArticles(for: currentPage)
+        getEvents()
     }
     
     func refresh() {
@@ -38,6 +41,22 @@ class EventsViewModel: EventsViewOutput {
 // MARK: - Private Methods
 
 private extension EventsViewModel {
+    
+    func getEvents() {
+        activityIndicator?(true)
+        eventsInteractor.getEvents { [weak self] result in
+            self?.activityIndicator?(false)
+            switch result {
+            case .success(let events):
+                print(events)
+                break
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.output.showError(error)
+                }
+            }
+        }
+    }
     
     func updateSections() {
         

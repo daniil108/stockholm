@@ -8,7 +8,9 @@
 import Foundation
 
 private enum PossibleServerFormats: String, CaseIterable {
-    case iso8601full = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    
+    case iso8601full = "yyyy-MM-dd'T'HH:mm:ssZZZZZZ"
+    
 }
 
 extension JSONDecoder.DateDecodingStrategy {

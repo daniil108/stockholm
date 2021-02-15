@@ -29,6 +29,10 @@
 		70DBC6FE25DA62DF002B315D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6FD25DA62DF002B315D /* Route.swift */; };
 		70DBC70125DA6320002B315D /* DateDecodingStrategy+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC70025DA6320002B315D /* DateDecodingStrategy+Extension.swift */; };
 		70DBC70425DA6399002B315D /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC70325DA6399002B315D /* Urls.swift */; };
+		70DBC70725DA708D002B315D /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC70625DA708D002B315D /* Events.swift */; };
+		70DBC70A25DA70C2002B315D /* EventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC70925DA70C2002B315D /* EventsInteractor.swift */; };
+		70DBC70D25DA7466002B315D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC70C25DA7466002B315D /* Event.swift */; };
+		70DBC71025DA7482002B315D /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC70F25DA7482002B315D /* Venue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		70DBC6FD25DA62DF002B315D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		70DBC70025DA6320002B315D /* DateDecodingStrategy+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+Extension.swift"; sourceTree = "<group>"; };
 		70DBC70325DA6399002B315D /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		70DBC70625DA708D002B315D /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		70DBC70925DA70C2002B315D /* EventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractor.swift; sourceTree = "<group>"; };
+		70DBC70C25DA7466002B315D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		70DBC70F25DA7482002B315D /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +183,7 @@
 				70DBC6FA25DA62BE002B315D /* CustomError.swift */,
 				70DBC6FD25DA62DF002B315D /* Route.swift */,
 				70DBC70325DA6399002B315D /* Urls.swift */,
+				70DBC70925DA70C2002B315D /* EventsInteractor.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -183,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				70DBC6F325DA6279002B315D /* ServerError.swift */,
+				70DBC70625DA708D002B315D /* Events.swift */,
+				70DBC70C25DA7466002B315D /* Event.swift */,
+				70DBC70F25DA7482002B315D /* Venue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DBC70725DA708D002B315D /* Events.swift in Sources */,
 				70DBC6C625DA59D2002B315D /* EventsModuleIntitializer.swift in Sources */,
 				70DBC6E025DA5DE7002B315D /* String+Extension.swift in Sources */,
 				70DBC6B925DA58D2002B315D /* Router.swift in Sources */,
@@ -272,9 +285,12 @@
 				70DBC6C925DA59DF002B315D /* EventsViewModel.swift in Sources */,
 				70DBC6D225DA5AE2002B315D /* Closure.swift in Sources */,
 				70DBC6F425DA6279002B315D /* ServerError.swift in Sources */,
+				70DBC71025DA7482002B315D /* Venue.swift in Sources */,
 				70DBC6B525DA58CA002B315D /* Coordinator.swift in Sources */,
 				70DBC6BE25DA597E002B315D /* EventsViewController.swift in Sources */,
+				70DBC70A25DA70C2002B315D /* EventsInteractor.swift in Sources */,
 				70DBC6CE25DA59F4002B315D /* ApplicationCoordinator.swift in Sources */,
+				70DBC70D25DA7466002B315D /* Event.swift in Sources */,
 				70DBC70125DA6320002B315D /* DateDecodingStrategy+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
