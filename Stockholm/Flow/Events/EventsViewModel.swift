@@ -23,17 +23,16 @@ class EventsViewModel: EventsViewOutput {
     
     // MARK: - ArticlesViewOutput
     
-//    var sections: ValueClosure<[SectionConfiguration]>?
+    var sections: ValueClosure<[SectionConfiguration]>?
     var scrollUp: EmptyClosure?
     var activityIndicator: ValueClosure<Bool>?
     
     func viewDidLoad() {
-//        getArticles(for: currentPage)
         getEvents()
     }
     
     func refresh() {
-//        getArticles(for: currentPage)
+        getEvents()
     }
     
 }

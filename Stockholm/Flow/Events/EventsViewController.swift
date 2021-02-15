@@ -12,11 +12,12 @@ class EventsViewController: UIViewController {
     
     // MARK: - IBOutlets
 
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Private Properties
     
     private let viewModel: EventsViewOutput
-//    private lazy var adapter = BaseTableViewAdapter(tableView)
+    private lazy var adapter = BaseTableViewAdapter(tableView)
     
     // MARK: - Initialization
     
@@ -46,7 +47,14 @@ private extension EventsViewController {
     
     func setupUI() {
         view.backgroundColor = .white
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
     
+        viewModel.sections = { [weak self] sections in
+            DispatchQueue.main.async {
+                self?.adapter.reloadWith(descriptors: sections)
+            }
+        }
     }
     
 }

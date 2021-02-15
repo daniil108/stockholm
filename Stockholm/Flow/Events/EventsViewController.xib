@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventsViewController" customModule="Stockholm" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="q8n-My-GyD" id="nKG-3L-YCN"/>
                 <outlet property="view" destination="ouS-1V-QcU" id="zP1-Ua-pui"/>
             </connections>
         </placeholder>
@@ -18,8 +19,20 @@
         <view contentMode="scaleToFill" id="ouS-1V-QcU">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q8n-My-GyD">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="zHW-jh-dhQ"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="q8n-My-GyD" firstAttribute="top" secondItem="zHW-jh-dhQ" secondAttribute="top" id="Uqm-91-3Xq"/>
+                <constraint firstItem="zHW-jh-dhQ" firstAttribute="leading" secondItem="q8n-My-GyD" secondAttribute="leading" id="jCG-Gj-zkW"/>
+                <constraint firstItem="zHW-jh-dhQ" firstAttribute="trailing" secondItem="q8n-My-GyD" secondAttribute="trailing" id="oQ5-3a-7Cj"/>
+                <constraint firstItem="zHW-jh-dhQ" firstAttribute="bottom" secondItem="q8n-My-GyD" secondAttribute="bottom" id="s4d-V9-XhB"/>
+            </constraints>
             <point key="canvasLocation" x="-501" y="87"/>
         </view>
     </objects>

@@ -33,6 +33,12 @@
 		70DBC70A25DA70C2002B315D /* EventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC70925DA70C2002B315D /* EventsInteractor.swift */; };
 		70DBC70D25DA7466002B315D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC70C25DA7466002B315D /* Event.swift */; };
 		70DBC71025DA7482002B315D /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC70F25DA7482002B315D /* Venue.swift */; };
+		70DBC71425DA7708002B315D /* BaseTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC71325DA7708002B315D /* BaseTableViewAdapter.swift */; };
+		70DBC71825DA772A002B315D /* SectionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC71725DA772A002B315D /* SectionConfiguration.swift */; };
+		70DBC71B25DA7745002B315D /* CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC71A25DA7745002B315D /* CellConfiguration.swift */; };
+		70DBC71E25DA7763002B315D /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC71D25DA7763002B315D /* ReusableView.swift */; };
+		70DBC72125DA777B002B315D /* ResourceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC72025DA777B002B315D /* ResourceRouter.swift */; };
+		70DBC72425DA7797002B315D /* ClickableCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC72325DA7797002B315D /* ClickableCellConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +70,12 @@
 		70DBC70925DA70C2002B315D /* EventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractor.swift; sourceTree = "<group>"; };
 		70DBC70C25DA7466002B315D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		70DBC70F25DA7482002B315D /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		70DBC71325DA7708002B315D /* BaseTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewAdapter.swift; sourceTree = "<group>"; };
+		70DBC71725DA772A002B315D /* SectionConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionConfiguration.swift; sourceTree = "<group>"; };
+		70DBC71A25DA7745002B315D /* CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfiguration.swift; sourceTree = "<group>"; };
+		70DBC71D25DA7763002B315D /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		70DBC72025DA777B002B315D /* ResourceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRouter.swift; sourceTree = "<group>"; };
+		70DBC72325DA7797002B315D /* ClickableCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableCellConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,7 @@
 		70DBC6AD25DA589D002B315D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				70DBC71225DA76F4002B315D /* Adapter */,
 				70DBC6EE25DA6196002B315D /* Network */,
 				70DBC6D725DA5D35002B315D /* Extensions */,
 				70DBC6B325DA58BB002B315D /* Coordinator */,
@@ -199,6 +212,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		70DBC71225DA76F4002B315D /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				70DBC71325DA7708002B315D /* BaseTableViewAdapter.swift */,
+				70DBC71725DA772A002B315D /* SectionConfiguration.swift */,
+				70DBC71A25DA7745002B315D /* CellConfiguration.swift */,
+				70DBC71D25DA7763002B315D /* ReusableView.swift */,
+				70DBC72025DA777B002B315D /* ResourceRouter.swift */,
+				70DBC72325DA7797002B315D /* ClickableCellConfiguration.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,25 +298,31 @@
 			files = (
 				70DBC70725DA708D002B315D /* Events.swift in Sources */,
 				70DBC6C625DA59D2002B315D /* EventsModuleIntitializer.swift in Sources */,
+				70DBC72425DA7797002B315D /* ClickableCellConfiguration.swift in Sources */,
 				70DBC6E025DA5DE7002B315D /* String+Extension.swift in Sources */,
 				70DBC6B925DA58D2002B315D /* Router.swift in Sources */,
 				70DBC6D925DA5D45002B315D /* UIWindow+Extension.swift in Sources */,
 				70DBC69225DA574C002B315D /* AppDelegate.swift in Sources */,
 				70DBC6FE25DA62DF002B315D /* Route.swift in Sources */,
+				70DBC71E25DA7763002B315D /* ReusableView.swift in Sources */,
 				70DBC6FB25DA62BE002B315D /* CustomError.swift in Sources */,
 				70DBC6DD25DA5D87002B315D /* Router+Extension.swift in Sources */,
+				70DBC71425DA7708002B315D /* BaseTableViewAdapter.swift in Sources */,
 				70DBC6F025DA622F002B315D /* Result.swift in Sources */,
 				70DBC70425DA6399002B315D /* Urls.swift in Sources */,
 				70DBC6F725DA6297002B315D /* APIClient.swift in Sources */,
 				70DBC6C925DA59DF002B315D /* EventsViewModel.swift in Sources */,
+				70DBC72125DA777B002B315D /* ResourceRouter.swift in Sources */,
 				70DBC6D225DA5AE2002B315D /* Closure.swift in Sources */,
 				70DBC6F425DA6279002B315D /* ServerError.swift in Sources */,
 				70DBC71025DA7482002B315D /* Venue.swift in Sources */,
 				70DBC6B525DA58CA002B315D /* Coordinator.swift in Sources */,
+				70DBC71825DA772A002B315D /* SectionConfiguration.swift in Sources */,
 				70DBC6BE25DA597E002B315D /* EventsViewController.swift in Sources */,
 				70DBC70A25DA70C2002B315D /* EventsInteractor.swift in Sources */,
 				70DBC6CE25DA59F4002B315D /* ApplicationCoordinator.swift in Sources */,
 				70DBC70D25DA7466002B315D /* Event.swift in Sources */,
+				70DBC71B25DA7745002B315D /* CellConfiguration.swift in Sources */,
 				70DBC70125DA6320002B315D /* DateDecodingStrategy+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

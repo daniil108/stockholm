@@ -15,7 +15,7 @@ protocol EventsModuleOutput: class {
 
 protocol EventsViewOutput: class {
 
-//    var sections: ValueClosure<[SectionConfiguration]>? { get set }
+    var sections: ValueClosure<[SectionConfiguration]>? { get set }
     var scrollUp: EmptyClosure? { get set }
     var activityIndicator: ValueClosure<Bool>? { get set }
     
